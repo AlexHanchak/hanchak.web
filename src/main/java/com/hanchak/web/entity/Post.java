@@ -1,5 +1,10 @@
 package com.hanchak.web.entity;
 
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,11 +19,12 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String author;
-
     private String title;
 
+    @Column(columnDefinition = "MEDIUMTEXT") // Specify MEDIUMTEXT data type
     private String content;
 
-    private String data;
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+    
 }
