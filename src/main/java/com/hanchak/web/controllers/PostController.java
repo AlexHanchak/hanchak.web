@@ -20,7 +20,7 @@ import com.hanchak.web.services.PostService;
 
 @RestController
 @RequestMapping("/")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("http://192.168.2.151:3000")
 public class PostController {
     
     @Autowired
